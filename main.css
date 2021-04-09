@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: crimson;
+}
+
+section{
+    height: 100vh;
+    min-width: none;
+    font-family: sans-serif;
+}
+
+.score{
+    color:whitesmoke;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score h2{
+    font-size: 30px;
+}
+
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    color: gold;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.intro{
+    color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.intro .typing{
+    text-align: center;
+    font-size: 50px;
+    color: gold;
+}
+
+.intro button,
+.options button{
+    background: none;
+    border: none;
+    background-color: black;
+    height: 50px;
+    width: 150px;
+    color: gold;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.winner{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hands,
+.options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-hand{
+    transform: rotateY(180deg);
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .33s ease-out;
+    transform: scale(1.2);
+}
+
+body.overlay-is-open .overlay{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+body.overlay-is-open .main {
+    filter: blur(4px);
+}
+
+.overlay-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.end-message {
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto auto;
+}
+
+.reset-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: gold;
+    border: none;
+    color: black;
+    border-radius: 7px;
+    padding: 12px 20px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+}
+  
+.reset-button:hover {
+    background-color: #00367e;
+}
+  
+.reset-button:focus {
+    background-color: #00275a;
+}
+
+@media (max-width:500px) {
+    .intro h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .game{
+        margin-left: 10px;
+    }
+
+    .winner{
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+    .player-hand,
+    .computer-hand{
+        height: 200px;
+        width: 200px;
+    }
+    .match > .options{
+        max-width: 300px;
+        margin-left: 50px;
+    }
+    .options button{
+        background: none;
+        border: none;
+        background-color: black;
+        height: 50px;
+        width: 90px;
+        color: gold;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
