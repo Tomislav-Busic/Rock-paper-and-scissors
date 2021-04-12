@@ -135,11 +135,13 @@ const game = () => {
         // ako pobjediš
         if (pScore === 10) {
             endMessage.textContent = "Congrats! You won.";
+            endMessage.style.color = "green";
             document.body.classList.add("overlay-is-open");
             setTimeout(() => resetButton.focus(), 331);
         }
         if (cScore === 10) {
             endMessage.textContent = "Sorry, you lose.";
+            endMessage.style.color = "crimson";
             document.body.classList.add("overlay-is-open");
             setTimeout(() => resetButton.focus(), 331);
         }
