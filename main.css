@@ -188,7 +188,7 @@ body.overlay-is-open .main {
 }
 
 .slider{
-    background:  yellow;
+    background-image: linear-gradient(red, yellow, green);
     position: fixed;
     top: 0;
     left: 0;
