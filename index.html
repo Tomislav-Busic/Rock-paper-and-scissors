@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <title>Rock paper and scissors</title>
 </head>
@@ -16,7 +18,7 @@
                 <p>0</p>
             </div>
             <div class="computer-score">
-                <h2>Computer</h2>
+                <h2>Robot</h2>
                 <p>0</p>
             </div>
         </div>
@@ -45,6 +47,26 @@
             </div>
         </div>
     </section>
+
+    <div class="intro1">
+        <div class="intro-text">
+            <h1 class="hide">
+                <span class="text" style="color: crimson;">ROCK</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text" style="color: yellow;">PAPER</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text" style="color: green;">SCISSORS</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="slider"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" 
+    integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" 
+    crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
 </body>
